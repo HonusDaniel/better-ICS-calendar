@@ -103,8 +103,8 @@ if (!empty($ics_data['colors'])) {
 									$thisistoday = wp_date('j', gmmktime(0,0,0,$month,$day,$year), $R34ICS->tz);
 									if (array_key_exists('multiday_position', $event) && $isittoday == $thisistoday) {
 										?><div>
-								</div><div class="jedenblok">
-								<dt class="time"><?php
+								</div><div class="jedenblok" id="blok_cislo_<?php echo $i++; ?>">
+								<dt class="time"><?php 
 										echo $event[start];
                     $konci = $event[dtend_time];
                     echo " - ";
@@ -126,7 +126,6 @@ if (!empty($ics_data['colors'])) {
 											$skip_i; continue;
 												}
 																		}
-
 
 										//print_r($event);
 
@@ -162,12 +161,17 @@ if (!empty($ics_data['colors'])) {
 												<div class="jedenblok" id="blok_cislo_<?php echo $i++; ?>">
 								<dt class="time" data-feed-key="<?php echo intval($event['feed_key']); ?>" ><?php
 												echo $event['start'];
-
-
-
+					if ($event['multiday_position'] == first) {						
+					$konci = $event[dtend_time];
+                    echo " - ";
+                    echo substr($konci, 0, 2);
+                    echo ":";
+                    echo substr($konci, 2, 2);
+}
 
 
 												if (!empty($event['end']) && $event['end'] != $event['start']) {
+													
 													if (empty($args['showendtimes'])) {
 														?>
 														<span class="show_on_hover">&#8211; <?php echo $event['end']; ?></span>
@@ -187,7 +191,7 @@ if (!empty($ics_data['colors'])) {
 
 
 											<dd class="<?php echo r34ics_event_css_classes($event, $time, $args); ?>" data-feed-key="<?php echo intval($event['feed_key']); ?>">
-												<?php
+												<?php 
 												// Event label (title)
 												echo $R34ICS->event_label_html($args, $event, (!empty($has_desc) ? array('has_desc') : null));
 
