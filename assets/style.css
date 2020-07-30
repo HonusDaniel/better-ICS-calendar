@@ -19,18 +19,17 @@ https://icscalendar.com
 
 	.ics-calendar.current_week_only tbody tr { display: none; }
 	.ics-calendar.current_week_only tbody tr.current-week { display: table-row; }
-	
+
 	.ics-calendar .hidden { display: none; }
-	
+
 	.ics-calendar .events {
 		overflow: visible;
 		margin:0;
 	}
-	
+
 		.ics-calendar .events dt, .ics-calendar .events dd { margin: 0 !important; }
 
 		.ics-calendar .events .time {
-			cursor: help;
 		}
 		.ics-calendar .events .time .show_on_hover {
 			display: inline-block;
@@ -42,7 +41,7 @@ https://icscalendar.com
 		.ics-calendar.hide_times .events .time { display: none !important; }
 
 		.ics-calendar .events .title.has_desc, .ics-calendar .events .eventdesc *[title] { cursor: help; }
-	
+
 		.ics-calendar .event {
 			position: relative;
 			z-index: 1;
@@ -50,7 +49,7 @@ https://icscalendar.com
 		.ics-calendar .event:hover {
 			z-index: 2;
 		}
-		
+
 			/* Source:  https://kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/ */
 			.ics-calendar .event * {
 				-ms-word-break: break-all;
@@ -64,11 +63,11 @@ https://icscalendar.com
 
 			.ics-calendar .event .descloc {
 				display: block;
-				font-size: 85%;
+				font-size: 75%;
 				font-weight: normal;
 				line-height: 1.5em;
 			}
-			
+
 				.ics-calendar .event .descloc * {
 					font-size: 100%;
 					letter-spacing: 0;
@@ -79,40 +78,40 @@ https://icscalendar.com
 			.ics-calendar.r34ics_toggle .event .descloc {
 				display: none;
 			}
-	
+
 			.ics-calendar.r34ics_toggle .event.open .descloc {
 				display: block;
 			}
-			
+
 			.ics-calendar .event .descloc div {
 				margin: 0 0 0.5em 0;
 			}
-			
+
 			.ics-calendar .event .descloc .attach_float {
 				float: right;
 				margin: 0 0 1em 1em;
 				max-width: 40%;
 				position: relative;
 			}
-			
+
 			.ics-calendar .event .descloc .attach_float img {
 				display: block;
 				height: auto;
 				max-width: 100%;
 				width: auto;
 			}
-			
+
 			.ics-calendar .event .descloc .organizer_email {
 				background: transparent url('icon-mail.svg') left center no-repeat;
 				background-size: 10px 10px;
 				display: block;
 				padding-left: 14px;
 			}
-	
+
 	.ics-calendar-title { }
-	
+
 	.ics-calendar-description { }
-	
+
 	.ics-calendar-select {
 		color: #191919; /* Resolves issues in some browsers when site has default text color set to white */
 		float: right;
@@ -122,7 +121,7 @@ https://icscalendar.com
 		min-width: 200px;
 		width: 200px;
 	}
-	
+
 	.ics-calendar-list-wrapper { }
 
 		.ics-calendar-list-wrapper .events .sublabel {
@@ -135,25 +134,25 @@ https://icscalendar.com
 		.ics-calendar-list-wrapper .desclog_toggle { }
 			.ics-calendar-list-wrapper .descloc_toggle_excerpt { cursor: help; display: block; }
 			.ics-calendar-list-wrapper .descloc_toggle_full { display: none; }
-		
+
 		.ics-calendar-list-wrapper .event {
 			clear: both;
 		}
-		
+
 	.ics-calendar-month-wrapper { }
-	
+
 		.ics-calendar-label {
 			clear: none !important;
 			margin: 0 !important;
 		}
-		
+
 		.ics-calendar-month-grid {
 			border-collapse: collapse;
 			line-height: 1.5em;
 			table-layout: fixed;
 			width: 100%;
 		}
-		
+
 			.ics-calendar-month-grid th, .ics-calendar-month-grid td {
 				border: 1px solid #ababab;
 				font-size: 70%;
@@ -168,7 +167,7 @@ https://icscalendar.com
 			.ics-calendar-month-grid th:hover, .ics-calendar-month-grid td:hover {
 				z-index: 2;
 			}
-			
+
 			.ics-calendar-month-grid th {
 				background: #ababab;
 				color: #191919;
@@ -176,35 +175,35 @@ https://icscalendar.com
 				text-align: center;
 				text-transform: uppercase;
 			}
-			
+
 			.ics-calendar-month-grid .day {
 				background: #f7f7f7;
 				font-weight: bold;
 				padding: 0.2em 0.8em;
 			}
-						
+
 			.ics-calendar-month-grid .off {
 				background: #f7f7f7;
 				color: rgb(153,153,153) !important;
 			}
-			
+
 			.ics-calendar-month-grid .past {
 				background: #f7f7f7;
 				opacity: 0.75;
 			}
-			
+
 			.ics-calendar-month-grid .today .day {
 				background: #777777;
 				color: #ffffff;
 			}
-			
+
 			.ics-calendar-month-grid ul.events {
 				list-style: none;
 				margin: 0;
 				min-height: 6em;
 				padding: 0;
 			}
-			
+
 				.ics-calendar-month-grid ul.events li {
 					border-bottom: 1px solid #dddddd;
 					margin: 0;
@@ -217,7 +216,7 @@ https://icscalendar.com
 					padding: 0.4em 0.8em;
 				}
 				.ics-calendar-month-grid ul.events > li:last-of-type { border-bottom: 0; }
-				
+
 					.ics-calendar-month-grid .events .all-day-indicator {
 						display: block;
 						font-size: 80%;
@@ -225,19 +224,19 @@ https://icscalendar.com
 						line-height: 1.5em;
 						text-transform: uppercase;
 					}
-			
+
 					.ics-calendar-month-grid .events .time {
 						display: block;
 						font-size: 90%;
 						font-weight: bold;
 						line-height: 1.5em;
 					}
-				
+
 					.ics-calendar-month-grid .events .title {
 						display: block;
 						line-height: 1.5em;
 					}
-				
+
 					.ics-calendar-month-grid .events .sublabel {
 						display: block;
 						font-size: 60%;
@@ -256,20 +255,20 @@ https://icscalendar.com
 		max-width: 50%;
 		width: auto;
 	}
-	
+
 		.ics-calendar-color-key-item {
 			line-height: 2em;
 			padding: 0.1em 0.5em;
 		}
-		
+
 		.ics-calendar-color-key.inline .ics-calendar-color-key-item {
 			display: inline-block;
 		}
-		
+
 			.ics-calendar-color-key-item label {
 				margin: 0;
 			}
-			
+
 				.ics-calendar-color-key-item label input[type=checkbox] {
 					vertical-align: baseline;
 				}
@@ -319,7 +318,7 @@ https://icscalendar.com
 		margin-bottom: 1em;
 		width: 100%;
 	}
-	
+
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid { margin-bottom: 3em; }
 
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid,
@@ -333,7 +332,7 @@ https://icscalendar.com
 		font-size: 100%;
 		width: 100%;
 	}
-	
+
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid thead,
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .off,
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .past,
@@ -345,7 +344,7 @@ https://icscalendar.com
 	}
 
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .day * { display: inline-block !important; }
-	
+
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid ul.events { min-height: 0; }
 
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .events .all-day-indicator { font-size: 75%; }
@@ -355,7 +354,7 @@ https://icscalendar.com
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .events .title { font-size: 100%; }
 
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .events .sublabel { font-size: 75%; }
-	
+
 	/* Don't show day-of-week in grid if .nomobile is on! */
 	.ics-calendar.nomobile .ics-calendar-month-grid .events .day > .phone_only { display: none; }
 
