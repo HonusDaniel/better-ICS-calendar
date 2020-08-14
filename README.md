@@ -1,7 +1,12 @@
 # radioostravan-ICS-calendar
 This is a part of a fork of the ICS-calendar plugin. It changes the look and functionality of the List view to suit my needs more.
+### What does it do?
+This is a wordpress plugin, forked from ics-calendar by room34 with modified functionality and a siple css style change. The modifications are only made to the List view.
 
 <img src="https://www.danielhonus.xyz/images/ics-screenshot.png" alt="screenshot" width="250px">
+
+### Installation
+TBA
 
 ### ICS-calendar original plugin
 Contributors: room34
