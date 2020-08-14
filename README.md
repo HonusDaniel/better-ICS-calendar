@@ -1,5 +1,5 @@
 # radioostravan-ICS-calendar
-This is a part of a fork of the ICS-calendar plugin. It parses the .ics feed from Google Calendar and creates an html table to be put onto your website. This fork changes the look and functionality of the List view to suit my needs more.
+This is a part of a fork of the ICS-calendar plugin. It parses a .ics/iCalendar-compatible feed (Google Calendar, Microsoft Outlook, macOS/iOS Calendar and many more) and creates an html table to be put onto your website. This fork changes the look and functionality of the List view to suit my needs more.
 ### What does it do?
 This is a wordpress plugin, forked from ics-calendar by room34 with modified functionality and a siple css style change. The modifications are only made to the List view.
 
