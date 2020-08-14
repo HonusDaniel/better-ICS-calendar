@@ -1,7 +1,7 @@
 # radioostravan-ICS-calendar
 This is a part of a fork of the ICS-calendar plugin. It changes the look and functionality of the List view to suit my needs more.
 
-<img src="https://raw.githubusercontent.com/HonusDaniel/radioostravan-ICS-calendar/master/screenshot.png" alt="screenshot" width="250px">
+<img src="https://www.danielhonus.xyz/images/ics-screenshot.png" alt="screenshot" width="250px">
 
 ### ICS-calendar original plugin
 Contributors: room34
@@ -16,7 +16,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Easily embed live updating iCal (ICS) feeds from Google Calendar, Outlook, Apple, etc. Multiple color-coded feeds, list/month/week views and more.
 
-== Description ==
+### Description
 
 Using a simple shortcode, you can embed any iCalendar-compatible feed (Google Calendar, Microsoft Outlook, macOS/iOS Calendar and many more) seamlessly into your WordPress site.
 
