@@ -6,7 +6,9 @@ This is a wordpress plugin, forked from ics-calendar by room34 with modified fun
 <img src="https://www.danielhonus.xyz/images/ics-screenshot.png" alt="screenshot" width="250px">
 
 ### Installation
-TBA
+Go to
+https://github.com/HonusDaniel/radioostravan-ICS-calendar/releases/tag/release and download latest release zip file, drop into the plugin installation page in
+Wordpress.
 
 ### ICS-calendar original plugin
 Contributors: room34
