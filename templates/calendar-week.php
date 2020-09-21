@@ -61,8 +61,8 @@ if (!empty($ics_data['colors'])) {
 	}
 
 	// Color code key
-	echo $R34ICS->color_key_html($args, $ics_data);		
-	
+	echo $R34ICS->color_key_html($args, $ics_data);
+
 	// Display calendar
 	if (empty($fixed_dates)) {
 		?>
@@ -77,7 +77,7 @@ if (!empty($ics_data['colors'])) {
 	// Actions before rendering calendar wrapper (can include additional template output)
 	do_action('r34ics_display_calendar_before_wrapper', $view, $args, $ics_data);
 	?>
-	
+
 	<article class="ics-calendar-week-wrapper" style="display: none;">
 		<table class="ics-calendar-month-grid<?php if (!empty($fixed_dates)) { echo ' fixed_dates'; } ?>">
 			<thead>
@@ -89,7 +89,7 @@ if (!empty($ics_data['colors'])) {
 						for ($day = $day_for_start; $day <= $day_for_max; $day++) {
 							$w = date('w',gmmktime(0,0,0,date('n',$startdate_timestamp),$day,date('Y',$startdate_timestamp)));
 							?>
-							<th data-dow="<?php echo $w; ?>"><?php echo $days_of_week[$w]; ?></th>
+							<!--<th data-dow="<?php echo $w; ?>"><?php echo $days_of_week[$w]; ?></th>-->
 							<?php
 						}
 					}
@@ -191,7 +191,12 @@ if (!empty($ics_data['colors'])) {
 							}
 							?>">
 								<div class="day">
-									<?php echo wp_date($date_format, $date, $R34ICS->tz); ?>
+									<?php
+									$w = date('w',gmmktime(0,0,0,date('n',$startdate_timestamp),$day,date('Y',$startdate_timestamp)));
+									echo $days_of_week[$w];
+									echo " ";
+									echo wp_date($date_format, $date, $R34ICS->tz);?>
+.
 								</div>
 								<ul class="events">
 									<?php
