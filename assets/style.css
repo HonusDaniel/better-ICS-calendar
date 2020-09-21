@@ -1,56 +1,17 @@
 /*
-ICS Calendar
-https://icscalendar.com
+Theme Name: ICS
+Text Domain: radioostravan
+Version: 1.79:public
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
 */
-
-
-@keyframes pulse-border {
-  0% {
-    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-    opacity: 0;
-  }
-}
-
-
-#blok_cislo_0 {
-	color:white;
-	font-weight: bold;
-	background-color: #AB1D1D;
-	animation-name: color;
-	animation-duration: 3s;
-	animation-iteration-count: infinite;
-}
-.jedenblok{background:#e7e5e5;border-bottom:1px #9e7a7a solid;margin: 0px auto;height: 5em;display: flex;flex-direction: row;align-items: center;}
-.jedenblok:hover{background:#d3d3d3;}
-.kliknutelnyblok{cursor: pointer;background: #d0d0d0;border-bottom:1px #9e7a7a solid;height: 4em;font-weight: bold;display: flex;flex-direction: column;align-items: center;padding: 10px 0;}
-.kliknutelnyblok:hover{background:#AB1D1D; color:white;}
-.kliknutelnyblok:hover > .sipka {
-	border: solid white;
-border-width: 0 3px 3px 0;
-}
-.site_drop_shadow{
-	box-shadow: inset 0px 5px 9px -4px rgb(0 0 0 / 19%);
-	background: whitesmoke;
-	height: 1em;
-}
-.bloky {
-	flex: 1;
-	overflow: auto;
-	/* order: 1; */
-	background: #f5f5f5;
-	/* -webkit-box-shadow: 0px 0px 10px 1px rgba(199,195,199,1); */
-	-moz-box-shadow: 0px 0px 10px 1px rgba(199,195,199,1);
-	/* box-shadow: 0px 0px 10px 1px rgba(199,195,199,1); */
-}
-
 .ics-calendar {
 	clear: both;
 	display: block;
-	margin: 1.5em 0;
+	/* margin: 1.5em 0; */
 }
 .ics-calendar:first-child { margin-top: 0; }
 
@@ -127,7 +88,10 @@ border-width: 0 3px 3px 0;
 			}
 
 			.ics-calendar .event .descloc div {
-				margin: 0 0 0.5em 0;
+				margin: 1em;
+				/*! position: absolute; */
+				z-index: 1000;
+				background: white;
 			}
 
 			.ics-calendar .event .descloc .attach_float {
@@ -194,11 +158,12 @@ border-width: 0 3px 3px 0;
 			line-height: 1.5em;
 			table-layout: fixed;
 			width: 100%;
+			border-right: 2px #9e7a7a80 solid;
 		}
 
 			.ics-calendar-month-grid th, .ics-calendar-month-grid td {
-				border: 1px solid #ababab;
-				font-size: 70%;
+				border: 1px #9e7a7a80 solid;
+				font-size: 71%;
 				overflow: visible;
 				padding: 0;
 				position: relative;
@@ -212,17 +177,21 @@ border-width: 0 3px 3px 0;
 			}
 
 			.ics-calendar-month-grid th {
-				background: #ababab;
-				color: #191919;
-				padding: 0.5em 0.8em 0.2em 0.8em;
+				color: #e3e2e2;
+				padding: .8em 0.8em .8em 0.8em;
 				text-align: center;
 				text-transform: uppercase;
 			}
 
 			.ics-calendar-month-grid .day {
-				background: #f7f7f7;
+				background: #2c2929;
 				font-weight: bold;
 				padding: 0.2em 0.8em;
+				border-bottom: 1px #9e7a7a30 solid;
+				color: #e3e2e2;
+				padding: .8em 0.8em .8em 0.8em;
+				text-align: center;
+				text-transform: uppercase;
 			}
 
 			.ics-calendar-month-grid .off {
@@ -251,7 +220,12 @@ border-width: 0 3px 3px 0;
 					border-bottom: 1px solid #dddddd;
 					margin: 0;
 					padding: 0.4em 0.8em;
+					border-bottom: 1px #9e7a7a4d solid;
 				}
+.ics-calendar-month-grid ul.events li:hover {
+	background:#d3d3d3;
+	background: ;
+}
 				.ics-calendar-month-grid ul.events li.all-day {
 					background: #f7f7f7;
 					border-bottom: none;
@@ -321,7 +295,7 @@ border-width: 0 3px 3px 0;
 @media screen and (min-width: 783px) {
 
 	.ics-calendar .event .hover_block {
-		background: #ffffff;
+		background: transparent;
 		border: 1px solid #ababab;
 		box-shadow: 2px 2px 5px rgba(25,25,25,0.1);
 		display: none;
@@ -340,7 +314,7 @@ border-width: 0 3px 3px 0;
 		right: 3em; left: auto;
 	}
 	.ics-calendar tr:last-of-type td .event .hover_block {
-		top: auto; bottom: 1em;
+		top: 2em; bottom: 1em;
 	}
 	.ics-calendar .event .has_desc:hover + .hover_block, .ics-calendar .event .hover_block:hover {
 		display: block !important;
@@ -374,13 +348,14 @@ border-width: 0 3px 3px 0;
 		display: block;
 		font-size: 100%;
 		width: 100%;
+		display: table;
 	}
 
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid thead,
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .off,
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .past,
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .empty
-	{ display: none; }
+	{display: none;}
 
 	.ics-calendar:not(.nomobile) .ics-calendar-month-grid .day {
 		padding: 0.5em 0.8em;
@@ -402,3 +377,13 @@ border-width: 0 3px 3px 0;
 	.ics-calendar.nomobile .ics-calendar-month-grid .events .day > .phone_only { display: none; }
 
 }
+@media only screen and (min-width : 900px) {
+.ics-calendar .event .descloc div {position: absolute;}
+.ics-calendar .event .hover_block {background: transparent!important;border:0;box-shadow: none;}
+.eventdesc {background: #f9f9f9 !important;
+border: 0;
+box-shadow: none;
+padding: 1em;}
+.home .kolemtlacitka {
+	display: none;
+}}
